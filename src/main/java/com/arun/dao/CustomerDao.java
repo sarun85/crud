@@ -20,7 +20,7 @@ public class CustomerDao {
       rs.getString("city"), rs.getString("zip"));
 
   public void addCustomer(Customer customer) {
-    jdbcTemplate.update("insert into customers values(first_name, last_name, city, zip, account_no) VALUES (?,?,?,?,?)", customer.toObjArr());
+    jdbcTemplate.update("insert into customers(first_name, last_name, city, zip, account_no) VALUES (?,?,?,?,?)", customer.toObjArr());
   }
 
   public Optional<Customer> getCustomer(Long accountNo) {
