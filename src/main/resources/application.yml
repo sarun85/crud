@@ -1,13 +1,14 @@
 server:
     port: 8085
 
-spring: 
+spring:
     main:
-        banner-mode: "off"  
+        banner-mode: "off"
     jersey:
-       application-path: /api   
+       application-path: /api
 
-logging: 
-    level: 
-        org: 
+logging:
+    file: "D:/Maven/api/target/logs/crud_app_log_file.log"
+    level:
+        org:
             springframework: INFO
