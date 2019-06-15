@@ -35,6 +35,10 @@ public class CustomerDao {
     jdbcTemplate.update("update customers set first_name=?, last_name=?, city=?, zip=? where account_no=?", customer.toObjArr());
   }
 
+  public void deleteCustomer(Long accountNo) {
+    jdbcTemplate.update("delete from customers where account_no=?", new Object[] {accountNo});
+  }
+
 
 
 

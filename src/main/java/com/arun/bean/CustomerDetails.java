@@ -30,4 +30,8 @@ public class CustomerDetails {
   public void modifyCustomer(Customer customer) {
     customerDao.modifyCustomer(customer);
   }
+
+  public void deleteCustomer(Long accountNo) {
+    customerDao.deleteCustomer(accountNo);
+  }
 }

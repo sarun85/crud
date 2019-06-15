@@ -11,7 +11,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class JacksonFactory {
+public final class JacksonFactory {
   private static ObjectMapper mapper = new ObjectMapper();
   private static final Logger LOG = LoggerFactory.getLogger(JacksonFactory.class);
 
@@ -28,7 +28,7 @@ public class JacksonFactory {
     return mapper;
   }
 
-  public String createJson(Object object) throws JsonParseException {
+  public static String createJson(Object object) throws JsonParseException {
     try {
       return getInstance().writeValueAsString(object);
     } catch (IOException e) {
@@ -37,7 +37,7 @@ public class JacksonFactory {
     }
   }
 
-  public <T> T fromJson(String json, Class<T> theClass) throws JsonParseException {
+  public static <T> T fromJson(String json, Class<T> theClass) throws JsonParseException {
     try {
       return getInstance().readValue(json, theClass);
     } catch (IOException e) {
@@ -46,7 +46,7 @@ public class JacksonFactory {
     }
   }
 
-  public <T> List<T> listFromJson(String json, Class<T> clazz) throws JsonParseException {
+  public static <T> List<T> listFromJson(String json, Class<T> clazz) throws JsonParseException {
     try {
       return getInstance().readValue(json, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
     } catch (IOException e) {

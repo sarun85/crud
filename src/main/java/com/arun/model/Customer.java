@@ -2,13 +2,22 @@ package com.arun.model;
 
 import java.util.Objects;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+import com.arun.bean.validators.NullValidations;
 
 public class Customer {
 
+  @NotNull
   private Long accountNo;
+  @NotEmpty
   private String firstName;
+  @NotEmpty
   private String lastName;
+  @NotEmpty
   private String city;
+  @NotEmpty
   private String zip;
 
   private Customer() {
