@@ -13,7 +13,7 @@ This is a simple CRUD project using Spring Boot - Jersey, Hibernate validator, S
 ### CommandLineRunner and ApplicationRunner
 
 Spring Boot provides two interfaces, CommandLineRunner and ApplicationRunner, to run specific pieces of code when an application is fully started. These interfaces get called just before run() once SpringApplication completes.
-
+[more details](https://dzone.com/articles/spring-boot-applicationrunner-and-commandlinerunne)
 ### H2 in-memory Database
 
 [H2 Cheatsheet](http://www.h2database.com/html/cheatSheet.html)
